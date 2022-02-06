@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    
+}
+.hed{
+    display: flex;
+    justify-content:space-between;
+  
+  align-items: center;
+  padding: 10px 40px;
+  background: #ffffff;
+  
+    
+}
+.navlink   li{
+    color:#60667D;
+    font-size: 16px;
+    padding: 0 20px;
+    display: inline-block;
+    list-style: none;
+   
+}
+ 
+   //unvisted link
+   a:link{
+       color:black;
+       text-decoration: none;
+   }  
+   // hover state
+   a:hover{
+
+    color:#081323;
+    text-decoration: underline  2px solid green;
+    text-underline-offset: 19px;
+}
+
+//active
+a:active{
+    color:#081323;
+}
+//visited
+a:visited 
+{
+    color:#60667D;
+}
+    //logo pointer
+.logo{
+    cursor: pointer;
+}
+.notice{
+    
+}
+//cont layout
+.cont{
+    display: flex;
+    justify-content: start;
+    padding:50px;
+}
+.acct-icon  nav li{
+    margin-top: 23px;
+    width:0px;
+}
+.grey{
+    position:relative;
+ background: #FAFBFF;
+ //padding:50px;
+ margin-top: 30;
+ 
+ min-height: 100vh; 
+}
+h3{
+    margin-top: 30px;
+    margin-left: 50px;
+    font-family: Airbnb Cereal App;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29px;
+}
+p{
+    color:#000C13;
+    font-size:16px;
+    margin-top: 20px;
+   margin-left: -350px;}
+
+   span{
+       color:#00A99D;
+       font-size: 70px;
+       padding: 0px;
+       margin: 0;
+   }
+    
+.tab{
+    display: flex;
+    justify-content:space-between;
+    border-bottom: 1px solid #0000003d;
+    padding: 0  50px;
+    padding-bottom: 10px;
+}
+.tab ul li{
+    display: inline-block;
+    padding: 0 35px;
+    padding-top: 30px;
+    font-size: 17px;
+    color: #000C13;
+}
