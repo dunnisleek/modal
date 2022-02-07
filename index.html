@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <title>Dunni Modal</title>
+    
+     
+  
+   
+
 </head>
 <body>
+    
     <header class="hed">
        
         <img  class="logo"  src="images/logo.svg">
@@ -29,24 +35,107 @@
            
            <img src="images/beta.svg">
            <h3> We need a landing page design</h3>
-           <p>Requested by: BetaSMS <span> . </span>on Track</p>
-        </div>
+           <p>Requested by: <u>BetaSMS</u> <span> . </span>on Track</p>
+        </div></u>
        
-       <div class="tab">
-           <ul>
-               <li> Overview</li>
-               <li> To do lists</li>
-               <li> Notes</li>
-               <li> Files</li>
-           </ul>
-        
-       </div>
-    </section>
       
-      
-
-  
+   
      
+
+<div class="tab">
+    <div class="btnwrapper">
+    <button class="tablinks" onclick="openCity(event, 'Overview')">Overview </button>
+    <button class="tablinks" onclick="openCity(event, 'todolist')">To do list</button>
+    <button class="tablinks" onclick="openCity(event, 'notes')">Notes</button>
+    <button class="tablinks" onclick="openCity(event, 'files')">Files</button>
+</div>
+  </div>
+  
+  <div id="overview" class="tabcontent">
+    <h3>Overview</h3>
+    <p>London is the capital city of England.</p>
+  </div>
+  
+  <div id="todolist" class="tabcontent">
+    <h3>To do list</h3>
+    <p>Paris is the capital of France.</p> 
+  </div>
+  
+  <div id="notes" class="tabcontent">
     
+    <button class="notebtn"> Add Notes</button>
+  </div>
+
+  <div id="files" class="tabcontent">
+    <p> This is for Files </p>
+  </div>
+
+  <div class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h1>Add A Bank Account</h1>
+        <p>Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        <form>
+          
+            <select id="bank" name="bank">
+              <option value="access">Access Bank</option>
+              <option value="gtb">GTB Bank</option>
+              <option value="Zenith">Zenith Bank</option>
+            </select>
+            <br>
+            <label for="number"></label>
+            <input type="text" id="number" name="name" > 
+          </label><br>
+          </label for="account name" > </label>
+          <input type="text" id="account name" name="name"  placeholder= "Account Name" placeholder= "Precious Ogar">
+          <br>
+          <input type="Submit" value="ADD BANK">
+
+          
+        </form>
+    </div>
+</div>
+  
+  <script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  //modal
+  const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".notebtn");
+const closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+  </script>
+<!--
+<div class="bg-modal">
+    <div class="modal-content"> </div>
+        
+   
+  </div> -->
+  
+    </section>
 </body>
 </html>
